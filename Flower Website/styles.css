@@ -1,0 +1,172 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+header {
+    background-color: #f8f8f8;
+    padding: 20px 0;
+}
+
+header h1 {
+    margin: 0;
+    color: #333;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+}
+
+.hero {
+    background-image: url('flower-hero.jpg');
+    background-size: cover;
+    color: #fff;
+    text-align: center;
+    padding: 100px 0;
+}
+
+.about,
+.products,
+.contact {
+    padding: 50px 0;
+}
+
+.products {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/* .product {
+    width: calc(33.33% - 20px);
+    margin-bottom: 40px;
+    text-align: center;
+} */
+
+.product {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 20px;
+}
+
+ .product img{
+     border-radius: 10px;
+     width: 80%;
+    
+    
+ }
+
+/* .product img {
+    width: 100%;
+    border-radius: 10px;
+} */
+
+.product h3 {
+    margin-top: 10px;
+}
+
+.product span {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.contact form {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.contact input[type="text"],
+.contact input[type="email"],
+.contact textarea {
+    width: calc(50% - 10px);
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+.contact textarea {
+    height: 100px;
+}
+
+.contact button {
+    width: 100%;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+input {
+    border: 2px solid green;
+    border-radius: 5px;
+}
+
+input:hover {
+    border: 2px solid red;
+    cursor: grab;
+    border-radius: 5px;
+}
+
+.back {
+    background-image: url('backimg.jpg');
+    
+        background-size: cover;
+        /* background-attachment: fixed; */
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+}
+
+/* Media queries for responsiveness */
+@media screen and (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+
+    .hero {
+        padding: 80px 0;
+    }
+
+    .product {
+        width: calc(50% - 20px);
+    }
+
+    .contact input[type="text"],
+    .contact input[type="email"],
+    .contact textarea {
+        width: 100%;
+    }
+}
